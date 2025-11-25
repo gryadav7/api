@@ -38,6 +38,7 @@ app.use("/api/category", CategoryRoute);
 app.use("/api/blog", BlogRoute);
 app.use("/api/comment", CommentRoute);
 app.use("/api/blog-like", BlogLikeRoute);
+app.use("/", "Hello");
 
 // error handler
 app.use((err, req, res, _next) => {
