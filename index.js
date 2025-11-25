@@ -38,7 +38,12 @@ app.use("/api/category", CategoryRoute);
 app.use("/api/blog", BlogRoute);
 app.use("/api/comment", CommentRoute);
 app.use("/api/blog-like", BlogLikeRoute);
-app.use("/", "Hello");
+app.get("/", (req, res) => {
+  res.status(200).json({
+    status: "Server is running successfully",
+    api_documentation: "Link to your docs here if you have them",
+  });
+});
 
 // error handler
 app.use((err, req, res, _next) => {
